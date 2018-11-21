@@ -1,0 +1,97 @@
+@import "vars"
+@import "fonts"
+@import "libs"
+
+::placeholder
+	color: #666
+
+::selection
+	background-color: $accent
+	color: #fff
+
+html, body
+	height: 100%
+
+body
+	font-size: 16px
+	min-width: 320px
+	position: relative
+	line-height: 1.65
+	font-family: $default-font
+	overflow-x: hidden
+	input, textarea
+		border: #666 1px solid
+		outline: none
+		&:focus:required:invalid
+			border-color: red
+		&:required:valid
+			border-color: green
+
+.img-responsive
+	display: block
+	max-width: 100%
+	height: auto
+	&.img-width
+		width: 100%
+
+.text-center
+	text-align: center
+
+/* Каталог товаров */
+
+.good-item
+	margin: 10px 0
+	padding: 20px
+	border: 1px solid gray
+	border-radius: 3px
+
+.good-item__id
+	padding-top: 30px
+	color: steelblue
+
+.good-item__name
+	padding-top: 10px
+	color: red
+
+.good-item__price
+	padding-top: 10px
+	color: red
+
+.good-item__btn-add
+	margin-top: 30px
+
+/* Корзина */
+
+.cart-item__btn-dec-count
+	margin-right: 10px
+	cursor: pointer
+
+.cart-item__btn-inc-count
+	margin-left: 10px
+	cursor: pointer
+
+.cart-item__btn-remove
+	cursor: pointer
+
+.total-count
+	margin-bottom: 20px
+
+/* Каталог товаров с фильтрами*/
+
+.small-good-item
+	border: 1px solid gray
+	padding: 5px
+	list-style-type: none
+	border-radius: 2px
+
+	&__img
+		max-width: 60%
+
+	&__name
+		color: steelblue
+	
+	&__price
+		color: red
+
+
+@import "media" // Always at the end
